@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.big_fil{
+    background-color: rgba(67, 82, 86, 0.354);
+}
+fieldset.big_fil{
+    position: relative;
+    top: 150px;
+    left: 35%;
+    width: 40%;
+    height: 210px;
+}
+img{
+    border-radius: 4%;
+}
+header{
+    position: absolute;
+    top: -5px;
+    left: 30%;
+    line-height: 10px;
+}
+header h1{
+    font-size: 30px;
+    text-transform: capitalize;
+}
+header p{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+}
+fieldset.litle_fil{
+    background-color: rgb(224, 224, 224);
+    position: absolute;
+    top: 80px;
+    left: 38%;
+    width: 55%;
+    height: 48%;
+    line-height: 15px;
+}
+.litle_fil label{
+    position: absolute;
+    font-weight: bolder;
+}
+.bord_bas{
+    margin-left: 39%;
+    width: 180px;
+    border-bottom: 1px dotted black;
+}
+.litle_fil label, hr{
+    line-height: 5px;
+}
+article img{
+    position:relative;
+    width: 25%;
+    left: 3%;
+    top: 45px;
+    border-right: 5px solid rgb(7, 65, 81);
+    border-top: 5px solid rgb(7, 65, 81);
+    border-width: 5px;
+}
+article span{
+    position: absolute;
+    width: 19%;
+    height: 12%;
+    top: 178px;
+    left: 8%;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    background-color: rgb(224, 224, 224);
+}
+article span h5{
+    color: red;
+    margin-top: 6%;
+    padding-left: 8%;
+}
+.bas_num{
+    position: absolute;
+    width: 90%;
+    top: 52%;
+    left: 5%;
+    border-bottom: 2px dotted black;
+}
+img#logo{
+    width: 25%;
+    position: absolute;
+    top: 20%;
+    left: 101%;
+}
+.deco{
+    background-color: rgb(251, 255, 9);
+    width: 42.5%;
+    margin-top: 11%;
+    height: 35px;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    margin-left: 35.2%;
+}
+.deco_photo{
+    background-color: rgb(7, 65, 81);
+    width: 7.5%;
+    margin-top: -21.7%;
+    height: 195px;
+    border-top-left-radius: 10%;
+    margin-left: 35.2%;
+}
+li{
+    position: absolute;
+    margin-top: -2%;
+    left: 42%;
+    list-style-type: none;
+    font-weight: 500;
+}
+#imprimer{
+    position: absolute;
+    left: 37%;
+    top: 90%;
+}
+div#carte{
+    margin-top: -10%;
+    display: none;
+}
+fieldset.big_verso{
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 46.5%;
+    left: 35%;
+    width: 40%;
+    height: 211px;
+    border-radius: 4%;
+}
+div.bas{
+    position: absolute;
+    background-color: rgb(251, 255, 9);
+    width: 100%;
+    height: 17%;
+    top: 83%;
+    left: 0%;
+    border-bottom-left-radius: 4%;
+    border-bottom-right-radius: 4%;
+}
+div.droite{
+    position: absolute;
+    background-color: rgb(7, 65, 81);
+    width: 20%;
+    height: 83%;
+    top: 0%;
+    left: 80%;
+    border-top-right-radius: 4%;
+}
+.big_verso h5{
+    margin-top: -0.5%;
+    text-align: center;
+    margin-left: -8%;
+}
+fieldset.detail_verso{
+    position: absolute;
+    top: 19.5%;
+    width: 71%;
+    height: 52.5%;
+    left: 1%;
+    padding-top: 2%;
+    padding-left: 1%;
+    font-weight: bolder;
+    background-color: rgb(224, 224, 224);
+    line-height: 18%;
+}
+img#logo_verso{
+    position: absolute;
+    width: 9.5%;
+    top: 0%;
+    border-radius: 50%;
+}
+.bas p{
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 10px;
+}
+form#renseignement{
+    margin-top: 2%;
+    text-align: center;
+    width: 60%;
+    margin-left: 20%;
+}
+input{
+    width: 40%;
+    height: 25px;
+    text-align: center;
+}
+label span{
+    font-weight: 400;
+    margin-left: 6%;
+}
+footer{
+    position: absolute;
+    margin-left: 40%;
+}
+    </style>
+</head>
+<body>
+    <div class="verso">
+        <fieldset class="big_verso">
+            <img src="logo_u2ma.jpg" id="logo_verso">
+            <h5>Union des Universitaires de Mananara-Nord <br> à Antananarivo(U2MA)</h5>
+            <fieldset class="detail_verso">
+                <label>Votre Filière :<span></span> <hr></label><br>
+                <label>Année du BACC :<span></span> <hr></label><br>
+                <label>Membres dépuis : <span></span> <hr></label><br>
+                <label>Nom du Promotion :<span></span> <hr></label><br>
+                <label>Commune d'Origine :<span></span> <hr></label><br>
+                <label>Contact / Téléphone :<span></span> <hr></label><br>
+            </fieldset>
+            <div class="droite">
+
+            </div>
+            <div class="bas">
+                <p>Consérver bien cette carte</p>
+            </div>
+        </fieldset>
+    </div>
+    <div id="carte">
+        <div class="divi">
+          <fieldset class="big_fil">
+              <article>
+                  <img src="default.png" id="photo"> <br>
+                  <span><h5>N°: 511.001</h5><hr class="bas_num"></span>
+              </article>
+              <header>
+                  <h1>carte d'adhésion</h1>
+                  <p>2024</p>
+                  <img src="logo_u2ma.jpg" id="logo">
+              </header>
+              <main>
+                  <fieldset class="litle_fil">
+                      <label>Nom : <li></li><hr class="bord_bas"></label><br><br>
+                      <label>Prénom : <li></li><hr class="bord_bas"></label> <br><br>
+                      <label>Adresse : <li></li><hr class="bord_bas"></label> <br><br>
+                      <label>Expire le : <li></li><hr class="bord_bas"></label> <br><br>
+                  </fieldset>
+              </main>
+          </fieldset>
+      </div>
+      <div class="deco">
+          
+      </div>
+      <div class="deco_photo">
+  
+      </div>
+      <input type="button" onclick="window.print();style.display.none" value="Imprimer" id="imprimer">
+  </div>
+  <form id="renseignement">
+      <fieldset>
+        <h3>Completer les renseignement suivants <br> pour adhérer à l'U2MA</h3>
+        <input type="text" placeholder="Votre nom"> <br><br>
+        <input type="text" placeholder="votre Prenom"> <br><br>
+        <input type="text" placeholder="Adresse"> <br><br>
+        <input type="text" placeholder="Date d'expiration" disabled class="date_expire"> <br><br>
+        <input type="text" placeholder="votre Filière"> <br><br>
+        <input type="text" placeholder="Année du BACC"> <br><br>
+        <input type="text" placeholder="Membres U2MA dépuis"> <br><br>
+        <input type="text" placeholder="Nom du Promotion"> <br><br>
+        <input type="text" placeholder="Commune d'origine"> <br><br>
+        <input type="tel" placeholder="Contact / Téléphone"> <br><br>
+      </fieldset>
+  </form>
+<footer>
+    <input type="file" id="file">
+    <button class="valider">Valider</button> <br>
+    <a href="index.html">Accueil</a>
+    <a href="membres.html">Les Membres</a>
+</footer>
+ 
+    <script>
+        var date_expire = document.querySelector(".date_expire");
+        var sp = document.querySelectorAll("span");
+        var big_verso = document.querySelector(".big_verso");
+        var btn = document.querySelector(".valider");
+        var li = document.querySelectorAll("li");
+        var carte = document.querySelector("#carte")
+        var inp = document.querySelectorAll("input");
+        var reins = document.querySelector("#renseignement");
+        btn.addEventListener("click",function(){
+            big_verso.style.display="block";
+            carte.style.display="block";
+            reins.style.display="none";
+            btn.style.display="none";
+            file.style.display="none";
+            li[0].style.textTransform="uppercase";
+            li[1].style.textTransform="capitalize";
+            li[2].style.textTransform="capitalize";
+            li[0].textContent=inp[1].value;
+            li[1].textContent=inp[2].value;
+            li[2].textContent=inp[3].value;
+            li[3].textContent=jour+" / 0"+mois+" / "+an;
+            sp[0].textContent=inp[5].value;
+            sp[0].style.textTransform="capitalize";
+            sp[1].textContent=inp[6].value;
+            sp[2].textContent=inp[7].value;
+            sp[3].style.textTransform="uppercase";
+            sp[3].textContent=inp[8].value;
+            sp[4].textContent=inp[9].value;
+            sp[5].textContent=inp[10].value;
+            sp[5].style.textTransform="capitalize";
+                });
+        var img = document.querySelector("#photo");
+        var file = document.querySelector("#file");
+        file.addEventListener("change",function(){
+            var choosedfile = this.files[0];
+            if (choosedfile){
+                var reader = new FileReader();
+                reader.addEventListener("load",function(){
+                    img.setAttribute("src",reader.result);
+                })
+            }
+            reader.readAsDataURL(choosedfile);
+        })
+        var d = new Date();
+        var an = d.getFullYear()+1;
+        var mois = d.getMonth()+1;
+        var jour = d.getDate();
+    </script>
+</body>
+</html>
