@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15%;
+    box-shadow: rgba(0, 0, 0, 0.1)0 0 10px;
+    background-color: #fff;
+}
+
+.logo img{
+    width: 50px;
+    border-radius: 50%;
+}
+.logo h3{
+    position: relative;
+    left: 50%;
+    top: -50px;
+}
+.logo p{
+    position: relative;
+    left: 35%;
+    top: -50px;
+    font-size: 12px;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+ul li{
+    margin: 0 10px;
+}
+.menu li a{
+    text-decoration: 0;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.5s;
+    border-radius: 6px;
+}
+.menu li a:hover{
+    background-color: #000;
+    color: #fff;
+}
+@media screen and (max-width:1130px){
+    body{
+        position: relative;
+    }
+    header{
+        padding: 10px 20px;
+    }
+    ul {
+        flex-direction: column;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.8);
+        top: 0;
+        left: -1500px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        transition: 0.5s;
+    }
+    ul li{
+        margin: 20px 0;
+    }
+    ul li a{
+        text-transform: uppercase;
+    }
+}
+.button{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+}
+.button::after{
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background-color:#000 ;
+    box-shadow: 0 10px 0 #000;
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+.button.active::after{
+    box-shadow: 0 0 0 #000;
+    transform: rotate(45deg);
+}
+.button::before{
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background-color:#000 ;
+    transform: translateY(10px);
+    transition: 0.5s;
+}
+.button.active::before{
+    box-shadow: 0 0 0 #000;
+    transform: rotate(-45deg);
+}
+ul.active{
+    left: 0;
+}
+        h4{
+            text-align: center;
+        }
+        td,th{
+            border: 1px solid black;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" id="logo">
+            <h3>U2MA</h3>
+            <p>Union des Universitaires de <br>Mananara-Nord à Antananarivo</p>
+        </div>
+        <div class="button">
+
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#">A propos</a></li>
+            <li><a href="membres.html">Membres</a></li>
+            <li><a href="#">Histoire</a></li>
+            <li><a href="formulaire_inscription.html">Inscrire</a></li>
+        </ul>
+    </header><br>
+    <h4>Listes des Membres Adherer à l'U2MA et Ses Renseignement</h4>
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Année <br>d'adhesion</th>
+            <th>Cotisation Annuel</th>
+            <th>Année du BACC</th>
+            <th>Filière</th>
+            <th>Promotion</th>
+        </tr>
+        <tr>
+            <td>SOFA</td>
+            <td>Felix</td>
+            <td>2022</td>
+            <td>Payé</td>
+            <td>2021</td>
+            <td>Informatique</td>
+            <td>TAROKA</td>
+        </tr>
+    </table>
+    <script>
+        var button = document.querySelector(".button");
+        var menu = document.querySelector(".menu");
+        button.addEventListener("click",function(){
+            button.classList.toggle("active");
+            menu.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
