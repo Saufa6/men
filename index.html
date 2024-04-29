@@ -3,9 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="logo.jpg">
+    <title>U2MA TANA</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 15%;
+            box-shadow: rgba(0, 0, 0, 0.1)0 0 10px;
+            background-color: #fff;
+        }
+        body{
+            background-color: azure;
+        }
+        .logo img{
+            width: 50px;
+            border-radius: 50%;
+        }
+        .logo h3{
+            position: relative;
+            left: 50%;
+            top: -50px;
+        }
+        .logo p{
+            position: relative;
+            left: 35%;
+            top: -50px;
+            font-size: 12px;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        ul li{
+            margin: 0 10px;
+        }
+        .menu li a{
+            text-decoration: 0;
+            color: #000;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: 0.5s;
+            border-radius: 6px;
+        }
+        .menu li a:hover{
+            background-color: #000;
+            color: #fff;
+        }
+        @media screen and (max-width:1130px){
+            body{
+                position: relative;
+            }
+            header{
+                padding: 10px 20px;
+            }
+            ul {
+                flex-direction: column;
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.8);
+                top: 0;
+                left: -1500px;
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                backdrop-filter: blur(10px);
+                transition: 0.5s;
+            }
+            ul li{
+                margin: 20px 0;
+            }
+            ul li a{
+                text-transform: uppercase;
+            }
+        }
+        .button{
+            width: 50px;
+            height: 50px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 100;
+        }
+        .button::after{
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 2px;
+            background-color:#000 ;
+            box-shadow: 0 10px 0 #000;
+            transform: translateY(-10px);
+            transition: 0.5s;
+        }
+        .button.active::after{
+            box-shadow: 0 0 0 #000;
+            transform: rotate(45deg);
+        }
+        .button::before{
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 2px;
+            background-color:#000 ;
+            transform: translateY(10px);
+            transition: 0.5s;
+        }
+        .button.active::before{
+            box-shadow: 0 0 0 #000;
+            transform: rotate(-45deg);
+        }
+        ul.active{
+            left: 0;
+        }
+        div.body .question{
+            text-align: center;
+            line-height: 25px;
+        }
+        div.body .question button{
+            margin-left: 3%;
+        }
+        span.liens1 a{
+            margin-left: 5%;
+        }
+        span.messages a.rep_non{
+            display: none;
+        }
+        span.messages a.rep_oui{
+            display: none;
+        }
+        span.messages p.rep_fac{
+            color: red;
+        }
+        h3.presentation{
+            text-align: center;
+        }
+        table{
+            width: 100%;
+        }
+        td img{
+            width: 60%;
+            border-radius: 50%;
+            margin-left: 10%;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>titre</h1>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" id="logo">
+            <h3>U2MA</h3>
+            <p>Union des Universitaires de <br>Mananara-Nord à Antananarivo</p>
+        </div>
+        <div class="button">
+
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#">A propos</a></li>
+            <li><a href="membres.html">Membres</a></li>
+            <li><a href="#">Histoire</a></li>
+            <li><a href="formulaire_inscription.html">Inscrire</a></li>
+        </ul>
+    </header><br>
+    <div class="body">
+        <article class="question">
+        <p>Est-ce que vous etes Membres ?</p>
+        <button class="btn_oui">OUI</button>
+        <button class="btn_non">NON</button>
+        <span class="messages">
+            <a href="formulaire_inscription.html" class="rep_non">Cliquer ici pour s'inscrire</a>
+            <a href="membres.html" class="rep_oui">Cliquer ici pour verifier</a>
+            <p href="#" class="rep_fac">Facultatif</p>
+        </span>
+        </article>
+        <span class="liens1">
+            <a href="#">Présentation</a>
+            <a href="#">Actualités</a>
+            <a href="#">Activitées</a>
+            <a href="#">Statuts</a>
+        </span>
+        <p>.</p>
+            <table>
+                <caption>                 .</caption>
+                <h3 class="presentation">Presentation du Membres de <br> bureau U2MA 2024</h3>
+                <tr>
+                    <td rowspan="2"><a href="tojo.png"><img src="tojo.png"></a></td>
+                    <th style="color: brown;">Président</th>
+                </tr>
+                <tr>
+                    <td>Mr TOJOARIJAONA Antonio, consectetur adipisicing elit. Quas id quibusdam culpa mollitia exercitationem deleniti, nostrum, recusandae ipsam 
+                    doloremque architecto assumenda impedit earum, sapiente eum</td>
+                </tr>
+            </table>
+            <hr> <br>
+            <table>
+                <tr>
+                    <td rowspan="2"><a href="frenal.png"><img src="frenal.png"></a></td>
+                    <th style="color: seagreen;">Vice-Président</th>
+                </tr>
+                <tr>
+                    <td>Mr FRENAL Lorem sit amet, consectetur adipisicing elit. Quas id quibusdam culpa mollitia exercitationem deleniti, nostrum, recusandae ipsam 
+                    doloremque architecto assumenda impedit earum, sapiente eum</td>
+                </tr>
+            </table>
+            <hr><br>
+            <table>
+                <tr>
+                    <td rowspan="2"><a href="rozalen.png"><img src="rozalen.png"></a></td>
+                    <th style="color: royalblue;">Trésorier</th>
+                </tr>
+                <tr>
+                    <td>Mr ROZALEN dolor sit amet, consectetur adipisicing elit. Quas id quibusdam culpa mollitia exercitationem deleniti, nostrum, recusandae ipsam 
+                    doloremque architecto assumenda impedit earum, sapiente eum</td>
+                </tr>
+            </table>
+            <hr> <br>
+            <table>
+                <tr>
+                    <td rowspan="2"><a href="sofa.jpg"><img src="sofa.jpg"></a></td>
+                    <th style="color: chartreuse";>Sécretaire Géneral</th>
+                </tr>
+                <tr>
+                    <td>Mr SOFA Felix sit amet, consectetur adipisicing elit. Quas id quibusdam culpa mollitia exercitationem deleniti, nostrum, recusandae ipsam 
+                    doloremque architecto assumenda impedit earum, sapiente eum</td>
+                </tr>
+            </table>
+            <hr><br>
+            <table>
+                <tr>
+                    <td rowspan="2"><a href="serginah.png"><img src="serginah.png"></a></td>
+                    <th style="color: violet;">Commisaires aux Comptes</th>
+                </tr>
+                <tr>
+                    <td>Mlle SERGINA sit amet, consectetur adipisicing elit. Quas id quibusdam culpa mollitia exercitationem deleniti, nostrum, recusandae ipsam 
+                    doloremque architecto assumenda impedit earum, sapiente eum</td>
+                </tr>
+            </table>
+            <hr> <br>
+            <table>
+                <tr>
+                    <td rowspan="2"><a href="cardo.png"><img src="cardo.png"></a></td>
+                    <th style="color: chocolate;">Logistiques</th>
+                </tr>
+                <tr>
+                    <td>Mr NOEL Cardo sit amet, consectetur adipisicing elit. Quas id quibusdam culpa mollitia exercitationem deleniti, nostrum, recusandae ipsam 
+                    doloremque architecto assumenda impedit earum, sapiente eum</td>
+                </tr>
+            </table>
+            <hr><br>
+            <table>
+                <tr>
+                    <td rowspan="2"><a href="louisiana.png"><img src="louisiana.png"></a></td>
+                    <th style="color: rgb(68, 68, 21);">Sécretaire</th>
+                </tr>
+                <tr>
+                    <td>Mlle ISEHY Marie Loisina amet, consectetur adipisicing elit. Quas id quibusdam culpa mollitia exercitationem deleniti, nostrum, recusandae ipsam 
+                    doloremque architecto assumenda impedit earum, sapiente eum</td>
+                </tr>
+            </table>
+            <hr><br>
+            <table>
+                <tr>
+                    <td rowspan="2"><a href="stiven.png"><img src="stiven.png"></a></td>
+                    <th style="color: teal;">Communication</th>
+                </tr>
+                <tr>
+                    <td>Mr STIVEN dolor sit amet, consectetur adipisicing elit. Quas id quibusdam culpa mollitia exercitationem deleniti, nostrum, recusandae ipsam 
+                    doloremque architecto assumenda impedit earum, sapiente eum</td>
+                </tr>
+            </table>
+            <hr> <br>
+            <table>
+                <tr>
+                    <td rowspan="2"><a href="totelys.png"><img src="totelys.png"></a></td>
+                    <th style="color: red;">Responsable Communication</th>
+                </tr>
+                <tr>
+                    <td>Mr VELO Christolin Etienne sit amet, consectetur adipisicing elit. Quas id quibusdam culpa mollitia exercitationem deleniti, nostrum, recusandae ipsam 
+                    doloremque architecto assumenda impedit earum, sapiente eum</td>
+                </tr>
+            </table>
+            <hr><br>
+            <table>
+                <tr>
+                    <td rowspan="2"><a href="rodriguez.png"><img src="rodriguez.png"></a></td>
+                    <th style="color: saddlebrown;">Chef de Projet</th>
+                </tr>
+                <tr>
+                    <td>Mr RODRIGUEZ Clairiot sit amet, consectetur adipisicing elit. Quas id quibusdam culpa mollitia exercitationem deleniti, nostrum, recusandae ipsam 
+                    doloremque architecto assumenda impedit earum, sapiente eum</td>
+                </tr>
+            </table>
+            <hr> <br>
+            <table>
+                <tr>
+                    <td rowspan="2"><a href="Romina.png"><img src="Romina.png"></a></td>
+                    <th style="color: red;">Projet Evenementielle</th>
+                </tr>
+                <tr>
+                    <td>Mlle ROMINA Etienne sit amet, consectetur adipisicing elit. Quas id quibusdam culpa mollitia exercitationem deleniti, nostrum, recusandae ipsam 
+                    doloremque architecto assumenda impedit earum, sapiente eum</td>
+                </tr>
+            </table>
+            <hr><br>
+            <table>
+                <tr>
+                    <td rowspan="2"><a href="mandela.png"><img src="mandela.png"></a></td>
+                    <th style="color: saddlebrown;">Responsable Social</th>
+                </tr>
+                <tr>
+                    <td>Mr RODRIGUEZ Clairiot sit amet, consectetur adipisicing elit. Quas id quibusdam culpa mollitia exercitationem deleniti, nostrum, recusandae ipsam 
+                    doloremque architecto assumenda impedit earum, sapiente eum</td>
+                </tr>
+            </table>
+            <hr> <br>
+            
+        </div>
+    </div>
+    <script>
+        var button = document.querySelector(".button");
+        var menu = document.querySelector(".menu");
+        var btn_non=document.querySelector(".btn_non");
+        var btn_oui=document.querySelector(".btn_oui");
+        var rep_non = document.querySelector(".rep_non");
+        var rep_oui = document.querySelector(".rep_oui");
+        var rep_fac = document.querySelector(".rep_fac");
+
+        button.addEventListener("click",function(){
+            button.classList.toggle("active");
+            menu.classList.toggle("active");
+        });
+        btn_oui.addEventListener("click",function(){
+            rep_oui.style.display="block";
+            rep_non.style.display="none";
+            rep_fac.style.display="none";
+        });
+        btn_non.addEventListener("click",function(){
+            rep_non.style.display="block";
+            rep_oui.style.display="none";
+            rep_fac.style.display="none";
+        })
+    </script>
 </body>
 </html>
